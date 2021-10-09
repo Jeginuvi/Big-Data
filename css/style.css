@@ -651,7 +651,13 @@ a[href*='tel'], a[href*='mailto'] {
 	position: relative;
 }
 
-
+.main-decorated-box:before {
+	content: '';
+	position: absolute;
+	background-size: contain;
+	width: 100%;
+	height: 100%;
+}
 
 @media (min-width: 1200px) {
 	.main-decorated-box:before {
