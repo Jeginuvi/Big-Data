@@ -76,60 +76,99 @@
         <div class="container">
           <div class="row justify-content-center">
             <div class="col-xl-8 text-center">
-              <h1 class="font-weight-bold wow fadeInLeft">Contacts</h1>
-              <p class="intro-description wow fadeInRight">Ut enim ad minim laboris nisi ut aliquip ex ea commodo consequat.</p>
+              <h1 class="font-weight-bold wow fadeInLeft">Contactanos</h1>
+              <p class="intro-description wow fadeInRight">Informanos o sugierenos algo.</p>
             </div>
           </div>
         </div>
       </section>
+
+      <br> <br>
+      <br> <br>
+      <br> <br>
       <!--Mailform-->
-      <section class="section section-md">
+      <div class="contact-section">
         <div class="container">
-          <!--RD Mailform-->
-          <div class="row justify-content-center">
-            <div class="col-xl-6 col-md-8 col-12">
-              <form class="rd-mailform text-left" data-form-output="form-output-global" data-form-type="contact" method="post" action="bat/rd-mailform.php">
-                <div class="form-wrap">
-                  <label class="form-label" for="contact-name">Name<span class="req-symbol">*</span></label>
-                  <input class="form-input" id="contact-name" type="text" name="name" data-constraints="@Required">
-                </div>
-                <div class="form-wrap">
-                  <label class="form-label" for="contact-phone">Phone<span class="req-symbol">*</span></label>
-                  <input class="form-input" id="contact-phone" type="text" name="phone" data-constraints="@Required @PhoneNumber">
-                </div>
-                <div class="form-wrap">
-                  <label class="form-label" for="contact-email">E-Mail<span class="req-symbol">*</span></label>
-                  <input class="form-input" id="contact-email" type="email" name="email" data-constraints="@Required @Email">
-                </div>
-                <div class="form-wrap">
-                  <label class="form-label label-textarea" for="contact-message">Message<span class="req-symbol">*</span></label>
-                  <textarea class="form-input" id="contact-message" name="message" data-constraints="@Required"></textarea>
-                </div>
-                <!--Google captcha-->
-                <div class="form-wrap text-left form-validation-left">
-                  <div class="recaptcha" id="captcha1" data-sitekey="6LfZlSETAAAAAC5VW4R4tQP8Am_to4bM3dddxkEt"></div>
-                </div>
-                <div class="form-button group-sm text-center text-lg-left">
-                  <button class="button button-primary" type="submit">Send</button>
-                </div>
-              </form>
+          <div class="row">
+            <!-- Contact Form -->
+            <div class="contact-form col-md-6 " >
+              <form action="Contactanos.php" method="post"><!--Inicio Form-->
+    
+                <div class="form-group">
+                  <label> Nombre</label>                    <input type="text" class="form-control" name="Nombre"  maxlength="40" pattern="[A-Za-zÀ-ÿ\u00f1\u00d1 ]+" title="Solo se admiten letras" required>
+                  </div>
+      
+                  <div class="form-group">
+                  <label> Correo Electrónico</label>                    <input type="Email" placeholder="usuario@correo.com" class="form-control" name="correo" required>
+                  </div>
+      
+                  <div class="form-group"><!-- form-group Begin -->
+      
+                    <label> Asunto: </label>
+      
+                    <select name="TipoAsunto" class="form-control"><!-- form-control Begin -->
+      
+      
+                      <option> Duda </option>
+                      <option> Sugerencia </option>
+                      <option> Felicitación </option>
+                      <option> Queja </option>
+      
+                    </select><!-- form-control Finish -->
+      
+                  </div><!-- form-group Finish -->
+      
+      
+                  <div class="form-group">
+                  <label> Mensaje</label>                    <textarea name="Mensaje" class="form-control">
+                    </textarea>
+                  </div>
+      
+                  <div class="text-center">
+                  
+                    <div class="form-button group-sm text-center text-lg-left">
+                      <button class="button button-primary" type="submit">Send</button>
+                    </div>
+                      
+                  </div>
+                  
+                  
+                </form><!--Final form-->
             </div>
-          </div>
-        </div>
-      </section>
+            <!-- ./End Contact Form -->
+            <div>
+              
+            </div>
+            <!-- Contact Details -->
+            <div class="contact-details col-md-6 " >
+              <div class="google-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3702.463520586747!2d-102.26510588522113!3d21.878219685544398!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8429ee069d6cf307%3A0xd93b5294c07171a7!2sInstituto%20Tecnol%C3%B3gico%20de%20Aguascalientes!5e0!3m2!1ses-419!2smx!4v1633146127006!5m2!1ses-419!2smx" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+              </div>
+              <ul class="contact-short-info" >
+                <li>
+                  <i class="tf-ion-ios-home"></i>
+                  <span>Av. Adolfo López Mateos Ote. # 1801, Bona Gens, 20256 Aguascalientes</span>
+                </li>
+                <li>
+                  <i class="tf-ion-android-mail"></i>
+                  <span>Email: Equipo1@gmail.com</span>
+                </li>
+              </ul>
+              <!-- Footer Social Links -->
+              
+            </div>
+            <!-- / End Contact Details -->
+              
+            
+          
+          </div> <!-- end row -->
+        </div> <!-- end container -->
+      </div>
       <!--Google Map-->
-      <section class="section">
-        <!--Please, add the data attribute data-key="YOUR_API_KEY" in order to insert your own API key for the Google map.-->
-        <!--Please note that YOUR_API_KEY should replaced with your key.-->
-        <!--Example: <div class="google-map-container" data-key="YOUR_API_KEY">-->
-        <div class="google-map-container contacts-map" data-center="9870 St Vincent Place, Glasgow, DC 45 Fr 45." data-zoom="5" data-icon="images/gmap_marker.png" data-icon-active="images/gmap_marker_active.png" data-styles="[{&quot;featureType&quot;:&quot;landscape&quot;,&quot;stylers&quot;:[{&quot;saturation&quot;:-100},{&quot;lightness&quot;:60}]},{&quot;featureType&quot;:&quot;road.local&quot;,&quot;stylers&quot;:[{&quot;saturation&quot;:-100},{&quot;lightness&quot;:40},{&quot;visibility&quot;:&quot;on&quot;}]},{&quot;featureType&quot;:&quot;transit&quot;,&quot;stylers&quot;:[{&quot;saturation&quot;:-100},{&quot;visibility&quot;:&quot;simplified&quot;}]},{&quot;featureType&quot;:&quot;administrative.province&quot;,&quot;stylers&quot;:[{&quot;visibility&quot;:&quot;off&quot;}]},{&quot;featureType&quot;:&quot;water&quot;,&quot;stylers&quot;:[{&quot;visibility&quot;:&quot;on&quot;},{&quot;lightness&quot;:30}]},{&quot;featureType&quot;:&quot;road.highway&quot;,&quot;elementType&quot;:&quot;geometry.fill&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#ef8c25&quot;},{&quot;lightness&quot;:40}]},{&quot;featureType&quot;:&quot;road.highway&quot;,&quot;elementType&quot;:&quot;geometry.stroke&quot;,&quot;stylers&quot;:[{&quot;visibility&quot;:&quot;off&quot;}]},{&quot;featureType&quot;:&quot;poi.park&quot;,&quot;elementType&quot;:&quot;geometry.fill&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#b6c54c&quot;},{&quot;lightness&quot;:40},{&quot;saturation&quot;:-40}]},{}]">
-          <div class="google-map"></div>
-          <ul class="google-map-markers">
-            <li data-location="9870 St Vincent Place, Glasgow, DC 45 Fr 45." data-description="9870 St Vincent Place, Glasgow"></li>
-          </ul>
-        </div>
-      </section><a class="section section-banner" href="https://www.templatemonster.com/intense-multipurpose-html-template.html" target="_blank" style="background-image: url(images/background-01-1920x310.jpg); background-image: -webkit-image-set( url(images/background-01-1920x310.jpg) 1x, url(images/background-01-3840x620.jpg) 2x )"><img src="images/foreground-01-1600x310.png" srcset="images/foreground-01-1600x310.png 1x, images/foreground-01-3200x620.png 2x" alt="" width="1600" height="310"></a>
-      <footer class="section footer-classic section-sm">
+      <br> <br>
+      <br> <br>
+      <br> <br>
+     <footer class="section footer-classic section-sm">
         <div class="container">
           <div class="row row-30">
             <div class="col-lg-3 wow fadeInLeft">
